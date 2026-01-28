@@ -1,0 +1,157 @@
+:root{
+    color-scheme: dark;
+}
+body{
+    background-color: whitesmoke;
+    margin: 0;
+    min-height: 100vh;
+    color: black;
+}
+nav{
+    background-color: black;
+    display: flex;
+    position: sticky;
+    justify-content: flex-end;
+}
+nav .login-logo{
+    position: absolute;
+    display: flex;
+    top: 0.6rem;
+    left: 1.5rem;
+    height: 60px;
+}
+.navbar-mune{
+    display: inline-flex;
+    padding: 20px;
+    gap: 30px;
+    list-style-type: none;
+    
+}
+.navbar-mune li a{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: white;
+    
+}
+.navbar-mune li a:hover{
+    color: gray;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown-list {
+    width: 110px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: black;
+    list-style: none;
+    padding: 20px;
+    border: 1px solid white;
+    z-index: 100;
+}
+.dropdown:hover .dropdown-list {
+    display: block;
+}
+.login-section{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 90vh;
+}
+.login-card{
+    margin: 15px;
+    max-width: 300px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.278);
+    background-color: rgb(167, 255, 164);
+    padding: 50px;
+    position: relative;
+    animation: shake 0.4s;
+}
+.login-card .close-btn{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: none;
+    background-color: rgb(58, 61, 63);
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 2px 5px;
+    transition: 0.4s;
+}
+.login-card .close-btn:hover{
+    rotate: 180deg;
+    transform: scale(1.2);
+}
+.login-card .card-title{
+    font-size: 2.2rem;
+}
+.login-card .input-group{
+    display: grid;
+
+}
+.login-card label{
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+}
+.login-card input{
+    font-size: 1rem;
+    width: 100%;
+    margin: 0 0 10px;
+
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px;
+}
+.login-card input:focus{
+    outline: none;
+    border: 2px dotted blue; 
+}
+.login-card .card-login-btn{
+    width: 104%;
+    background-color: rgb(117, 117, 253);
+    border: none;
+    padding: 8px 0;
+    border-radius: 10px;
+    transition: background-color 0.7s ease, transform 0.3s;
+    
+}
+.login-card .card-login-btn:hover{
+    background-color: rgb(40, 40, 234);
+    color: white;
+    transform: scale(1.05);
+}
+
+@keyframes shake {
+    0% {transform: translateX(0);}
+    25% {transform: translateX(-10px);}
+    50% {transform: translateX(10px);}
+    75% {transform: translateX(-10px);}
+    100% {transform: translateX(0);}
+}
+@media screen and (max-width: 500px) {
+    .navbar-mune{
+        padding: 10px;
+        gap: 10px;
+    }
+    .navbar-mune li a{
+        font-size: 0.9rem;
+    }
+    nav .login-logo{
+        top: 1rem;
+        height: 40px;
+    }
+    .login-card{
+        max-width: 300px;
+        transition: 0.4s;
+        padding: 40px;
+    }
+    .login-card .card-title{
+        font-size: 2rem;
+    }
+    
+}
